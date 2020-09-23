@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>csForbuilder :: Setup Wizard</title>
+<STYLE>
+
+.button3 {
+	BACKGROUND-COLOR: buttonface;
+	BORDER-BOTTOM: buttonshadow 1px solid;
+	BORDER-LEFT: buttonhighlight 1px solid;
+	BORDER-RIGHT: buttonshadow 1px solid;
+	BORDER-TOP: buttonhighlight 1px solid;
+	}
+
+.button2 {
+	BACKGROUND-COLOR: buttonface;
+	BORDER-BOTTOM: buttonshadow 1px solid;
+	BORDER-LEFT: buttonhighlight 1px solid;
+	BORDER-RIGHT: buttonshadow 1px solid;
+	BORDER-TOP: buttonhighlight 1px solid;
+	}
+
+.buttonOver2 {
+	BACKGROUND-COLOR: buttonface;
+	BORDER-BOTTOM: buttonhighlight 1px solid;
+	BORDER-LEFT: buttonshadow 1px solid;
+	BORDER-RIGHT: buttonhighlight 1px solid;
+	BORDER-TOP: buttonshadow 1px solid;
+	}
+.buttonDown2 {
+	BACKGROUND-COLOR: buttonface;
+	BORDER-BOTTOM: buttonhighlight 1px solid;
+	BORDER-LEFT: buttonshadow 1px solid;
+	BORDER-RIGHT: buttonhighlight 1px solid;
+	BORDER-TOP: buttonshadow 1px solid;
+	}
+
+body, p
+{
+    SCROLLBAR-FACE-COLOR: #000000;
+    FONT-SIZE: 10pt;
+    SCROLLBAR-HIGHLIGHT-COLOR: #d6d6d6;
+    SCROLLBAR-SHADOW-COLOR: #d6d6d6;
+    SCROLLBAR-3DLIGHT-COLOR: #000000;
+    SCROLLBAR-ARROW-COLOR: white;
+    SCROLLBAR-TRACK-COLOR: #d6d6d6;
+    FONT-FAMILY: Tahoma, sans-serif;
+    SCROLLBAR-DARKSHADOW-COLOR: #000000
+}
+P
+TABLE
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Tahoma, sans-serif;
+}
+TD
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Tahoma, sans-serif;
+}
+TR
+{
+    SCROLLBAR-FACE-COLOR: #000000;
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Tahoma, sans-serif;
+}
+TEXTAREA, SUBMIT, TEXT, SELECT
+{
+	font-family: tahoma;
+	font-size: 10pt;
+	background-color: #EFEFEF;
+	border: 1px inset;
+}
+
+INPUT.button
+{
+	COLOR: black;
+	TEXT-DECORATION: bold
+	font-family: tahoma;
+	font-size: 8pt;
+	background-color: #EFEFEF;
+	border: 1px outset;
+}
+
+INPUT.text
+{
+	font-family: tahoma;
+	font-size: 10pt;
+	background-color: #EFEFEF;
+	border: 1px inset;
+}
+
+INPUT.buttonOver
+{
+	COLOR: gray;
+	TEXT-DECORATION: bold
+	font-family: tahoma;
+	font-size: 8pt;
+	background-color: #CCCCCC;
+	border: 1px inset;
+}
+
+A
+{
+    COLOR: maroon;
+    FONT-FAMILY: Tahoma, sans-serif;
+    TEXT-DECORATION: none
+}
+A:link
+{
+    COLOR: maroon;
+    FONT-FAMILY: Tahoma, sans-serif;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: maroon;
+    FONT-FAMILY: Tahoma, sans-serif;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: black;
+    FONT-FAMILY: Tahoma, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+INPUT:hover
+{
+    background-color: #C0C0C0;
+}
+</STYLE>
+</head>
+
+<body>
+
+<form action="in(scriptname)" method="POST" name="form1">
+<input type=hidden name=command value=savesetup>
+  <div align="center">
+    <center>
+    <table borderColor="#000000" cellSpacing="0" cellPadding="5" border="2" style="border-collapse: collapse" width="440">
+      <tr>
+        <td width="95%">
+        <table style="BORDER-COLLAPSE: collapse" borderColor="#C0C0C0" cellSpacing="0" cellPadding="3" border="1">
+          <tr>
+            <td vAlign="top" align="left" bgcolor="#808080" bordercolorlight="#000000" bordercolordark="#808080">
+            <table border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="5">
+              <tr>
+                <td width="100%" align="center" nowrap>
+                <font face="Tahoma" color="#FFFFFF"><b>:: csFormbuilder » Setup
+                Wizard ::</b></font></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" align="left">
+            <div align="left">
+              <table border="1" border="1" cellspacing="0" style="border-collapse: collapse" width="100%" cellpadding="5" >
+                <tr>
+                  <td align="right" valign="top" colspan="2">
+					<p align="center"><b>Note:</b> In most cases, all you will
+					need to do is change the username and password and hit the
+					save button. The configuration variables should be
+					calculated correctly but please verify before saving.</td>
+                  </tr>
+				<tr>
+                  <td align="right" valign="top"><b>URL to csFormbuilder Directory:<br>
+                    ($cgiurl)</b></td>
+                  <td valign="top"><input type=text class=text name=mcgiurl value="in(mcgiurl)" size="30"></td>
+                	</tr>
+					<tr>
+                  <td align="right" valign="top"><b>Path to csFormbuilder Directory:<br>
+                    ($cgipath)</b></td>
+                  <td valign="top"><input type=text class=text name=mcgipath value="in(mcgipath)" size="30"></td>
+                	</tr>
+                <tr>
+                  <td align="right" valign="top"><b>URL to csFormbuilder Directory<br>
+					outside cgi-bin:<br>
+                    ($htmlurl)</b></td>
+                  <td valign="top">
+					<input type=text class=text name=mhtmlurl value="in(mhtmlurl)" size="30"></td>
+                </tr>
+                <tr>
+                  <td align="right" valign="top"><b>Path to csFormbuilder Directory<br>
+					outside cgi-bin:<br>
+                    ($htmlpath)</b></td>
+                  <td valign="top">
+					<input type=text class=text name=mhtmlpath value="in(mhtmlpath)" size="30"></td>
+                	</tr>
+					<tr>
+                  <td align="right" valign="top"><b>Path to Sendmail OR<br>
+					SMTP Server IP/Domain name:<br>
+                    ($sendmail)</b></td>
+                  <td valign="top">
+					<input type=text class=text name=msendmail value="in(msendmail)" size="30"><br>
+					<font size="1">NOTE: If installing on a windows<br>
+					server you must use a SMTP<br>
+					Server IP address or domain name</font></td>
+                </tr>
+                <tr>
+                  <td align="right" valign="top"><b>Username:<br>
+                    ($username)</b></td>
+                  <td valign="top"><input type=text class=text name=musername value="in(musername)" size="30"></td>
+                </tr>
+                <tr>
+                  <td align="right" valign="top"><b>Password:<br>
+                    ($password)</b></td>
+                  <td valign="top"><input type=text class=text name=mpassword value="in(mpassword)" size="30"></td>
+                </tr>
+                <tr>
+                  <td align="right" valign="top" colspan="2" align=center>
+                    <p align="center"><input type=submit class=button value="Save Setup"></td>
+                </tr>
+              </table>
+            </div>
+        </td>
+      </tr>
+    </table>
+</td>
+</tr>
+</table>
+    </center>
+  </form>
+</body>
+

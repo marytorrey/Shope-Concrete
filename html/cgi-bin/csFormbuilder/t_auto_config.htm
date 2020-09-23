@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>csFormBuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css">
+</head>
+<body>
+
+<form name="form1" method="post" action="in(cgiurl)">
+  <input type="hidden" name="command" value="in(command)">
+  <input type="hidden" name="id" value="in(id)">
+
+  <table width=750 align=center border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse">
+    <center>
+      <tr>
+        <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000">
+          <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#E2E2E2">
+          <p align="center"><b>Automatic Response (Autoresponder) Configuration</b>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%">
+          <table border="0" cellpadding="3" cellspacing="0" width=100%>
+            <tr>
+              <td width="100%" align="left" valign="top">
+                <div align="center">
+                  <table width=100% border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                    <tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>
+                        <input type="checkbox" name="autoenable" value="checked" in(autoenable)>
+                        Enable Autoresponder</b> </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">'<b>To</b>' form field:</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <select name=autoto>
+                        in(tosel)
+                        </select>  Other: <input name=autotoother value="in(autotoother)"><br>
+						Note: This must be a field on the form that collects the
+						user's email address.</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">From Name</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="autofromname" value="in(autofromname)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">From Email</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="autofromemail" value="in(autofromemail)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Subject</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="autofromsubject" value="in(autofromsubject)" size="41">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Message</b> </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right"></div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                      <input class="button" type="button" value="HMTL Editor" onClick="ShowEditor('autotemplate',0);"><br>
+                        <textarea name="autotemplate" cols="80" rows="20">in(autotemplate)</textarea><br>
+						<input type=checkbox name=autohtml value="checked" in(autohtml)>
+                        Send Autoresponse in HTML Format <br>
+						Note: To include fields submitted from the form, use the field name
+						surrounded by brackets.
+						Example: {FirstName}, {LastName}, {City}, etc. The following predefined fields
+						can also be used: {Date}, {REMOTE_ADDR} , {HTTP_USER_AGENT}, and {HTTP_REFERER}.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Attachments</b> [ <a href="javascript:ShowAddAttach();">Add Attachment</a> ]</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap colspan="2">
+                      <ul>
+					  in(attachline)
+					  </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+      <tr>
+        <td align="center" nowrap bgcolor="#CCCCCC">
+          <input class="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" type="submit" value="Save Configuration">
+          <input type="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" class="button" value="Home" onClick="javascript:window.location='in(cgiurl)?command=manage';">
+        </td>
+      </tr>
+    </center>
+  </table>
+		</form>
+<script language=javascript>
+function ShowAddAttach(){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=showaddattach&id=in(id)&rnd="+rndURL;
+   	window.open(NewURL,'','width=500,height=150,menubar=no,statusbar=no,toolbar=no,scrollbars=no');
+}
+
+function RemoveAttach(fid){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=removeattach&id=in(id)&fid="+fid+"&rnd="+rndURL;
+	if(confirm("Are you sure you want to remove this attachment?")){
+   		window.location=NewURL;
+   		}
+}
+
+function ShowEditor(fld,t){
+var rndURL = (1000*Math.random());
+var windowURL = "in(cgiurl)?command=showeditor&id=in(id)&database=in(database)&bodyMode="+t+"&fld="+escape(fld)+"&rnd="+rndURL;
+newWindow = window.open(windowURL,'preview','width=800,height=600,location=0,directories=0,status=0,menuBar=0,scrollBars=yes,resizable=yes');
+newWindow.focus();
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<html>
+
+<head>
+<title>csFormbuilder by WWW.CGISCRIPT.NET, LLC</title>
+<style>
+BODY, P, UL, LI, OL, TABLE, TD, TH, TR, TEXTAREA, FORM {
+	font-family : Tahoma, sans-serif;
+	font-size : 10pt;
+	scrollbar-arrow-color:WHITE;
+	scrollbar-track-color:#D6D6D6;
+	scrollbar-shadow-color:#D6D6D6;
+	scrollbar-face-color:#000000;
+	scrollbar-highlight-color:#D6D6D6;
+	scrollbar-darkshadow-color:#000000;
+	scrollbar-3dlight-color:#000000;
+}
+
+INPUT, BUTTON, SELECT {
+	font:tahoma;
+	font-size:8pt;
+	border-bottom-width : 1px;
+	border-bottom-color : Black;
+	border-left-width : 1px;
+	border-left-color : Black;
+	border-right-width : 1px;
+	border-right-color : Black;
+	border-top-width : 1px;
+	border-top-color : Black;
+}
+
+a, a:link, a:visited {
+	color:Maroon;
+	font-family: Tahoma, sans-serif;
+	text-decoration:none;
+}
+
+A:HOVER {
+	color:Black;
+	font-family:Tahoma, sans-serif;
+	text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<form method="POST" action="in(cgiurl)" name="form1" onSubmit="return SetPass();">
+  <input type="hidden" name="command" value="manage">
+  <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="middle" align="center">
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" height="100%">
+        <tr>
+          <td align="center">
+          <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#000000" width="350" bordercolorlight="#000000" bordercolordark="#000000" height="200">
+            <tr>
+              <td width="125" height="200" align="center" valign="middle">
+              <b><font size="5"><font color="#4070B1">Form</font><br>
+              </font></b><img border="0" src="in(imageurl)/ani_gears.gif" width="99" height="96"><br>
+              <font color="#4070B1" size="5"><b>Builder</b></font></td>
+              <td>
+              <p align="center"><b><font color="#4070B1" size="5">csFormBuilder</font></b>
+              </p>
+              <div align="center">
+                <center>
+                <table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+                  <tr>
+                    <td valign="middle" align="right">
+                    <p align="right">
+                    <font size="2">
+                    Username:</font></p>
+                    </td>
+                    <td>
+                    <font size="2">
+                    <input type="text" name="UserName" size="10"></font></td>
+                  </tr>
+                  <tr>
+                    <td valign="middle" align="right">
+                    <p align="right">
+                    <font size="2">
+                    Password:</font></p>
+                    </td>
+                    <td>
+                    <font size="2">
+                    <input type="password" name="PassWord" size="10"></font></td>
+                  </tr>
+                  <tr>
+				                      <td colspan="2">
+				                      <div align="center">
+				                        <table border="0" cellspacing="0">
+				                          <tr>
+				                            <td><font size="1"><input type="checkbox" name="rm" value="ON"></font></td>
+				                            <td><font size="1">Remember Me</font></td>
+				                          </tr>
+				                        </table>
+				                      </div>
+				                      </td>
+                  </tr>
+                </table>
+                </center>
+              </div>
+              <p align="center"><input type="submit" value="LOGIN" name="B1">
+              <br>
+              <font size="1">
+              <br>
+              &nbsp;©
+              WWW.CGISCRIPT.NET, LLC</font></p>
+              </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+<script language="javascript">
+document.form1.UserName.focus();
+
+if(GetCookie("RM") == 1){
+	document.form1.UserName.value = GetCookie("UserName");
+	document.form1.PassWord.value = GetCookie("PassWord");
+	document.form1.rm.checked = true;
+	}
+
+function SetPass(){
+var UserName = document.form1.UserName.value;
+var PassWord = document.form1.PassWord.value;
+
+if(!UserName){
+	alert("Error. Please enter a username");
+	return false;
+	}
+if(!PassWord){
+	alert("Error. Please enter a password");
+	return false;
+	}
+
+if(document.form1.rm.checked){
+	document.cookie = "UserName="+UserName+";Path=/;Expires="+getFuture(999);
+	document.cookie = "PassWord="+PassWord+";Path=/;Expires="+getFuture(999);
+	document.cookie = "RM=1;Path=/;Expires="+getFuture(999);
+	}
+else{
+	document.cookie = "UserName="+UserName+";Path=/";
+	document.cookie = "PassWord="+PassWord+";Path=/";
+	document.cookie = "RM=0;Path=/;Expires="+getFuture(999);
+	}
+return true;
+}
+
+
+function getFuture(f){
+var d = new Date();
+d.setTime(d.getTime() + (86400000 * f));
+return d;
+}
+
+// Ronnie Moore: Visit him at http://www.ronniemoore.com
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+  var j = i + alen;
+  if (document.cookie.substring(i, j) == arg)
+  return getCookieVal (j);
+  i = document.cookie.indexOf(" ", i) + 1;
+  if (i == 0) break;
+  }
+  return null;
+  }
+
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+  endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+</script>
+</html>

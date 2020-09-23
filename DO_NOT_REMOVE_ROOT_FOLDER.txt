@@ -1,0 +1,15 @@
+File Structure of Your Web Server
+/.cPanel     - Reserved for system use
+/.htpasswds  - Reserved for system use
+/etc         - Reserved for system use
+/mail        - Reserved for system use
+/tmp         - Reserved for system use
+/public_ftp  - Reserved for system use
+/public_html - Upload files to this directory
+/access-logs - Reserved for system use
+/www         - Upload files to this directory
+/public_html/.htaccess_doteasy
+             - Reserved for system use
+
+*Do not remove any of these folders and/or files contained within*
+** If any system folders or system files are removed by account holder, recovery fee may be applied.** 

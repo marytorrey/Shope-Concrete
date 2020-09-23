@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<title>csFormbuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css">
+</head>
+<body>
+<form action="in(cgiurl)" method="POST" name="form1">
+<input type=hidden name=command value=cp>
+  <div align="center">
+    <center>
+
+
+  <table border="1" width=750 cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse">
+     <tr>
+      <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000">
+        <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#E2E2E2">
+        <p align="center"><b>Change Password</b>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%">
+        <table border="0" width=100% cellpadding="3" cellspacing="0">
+          <tr>
+            <td width="100%" align="left" valign="top">
+            <div align="center">
+                              <table border="1" border="1" cellspacing="0" style="border-collapse: collapse" width="100%" cellpadding="5" >
+				                <tr>
+				                  <td align="right" valign="top"><b>Username:<br>
+				                    ($username)</b></td>
+				                  <td valign="top"><input type=text class=text name=musername value="in(musername)" size="30"></td>
+				                </tr>
+				                <tr>
+				                  <td align="right" valign="top"><b>Password:<br>
+				                    ($password)</b></td>
+				                  <td valign="top"><input type=password class=text name=mpassword size="30"></td>
+				                </tr>
+				                <tr>
+				                  <td align="right" valign="top"><b>Retype Password:<br>
+				                    ($password)</b></td>
+				                  <td valign="top"><input type=password class=text name=mpassword2 size="30"></td>
+				                </tr>
+				                <tr>
+				                  <td align="right" valign="top" colspan="2" align=center>
+				                    <p align="center"><input type=submit class=button value="Save Password"> <input type=button class=button value="Cancel" onClick="history.back();"></td>
+				                </tr>
+              </table>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" nowrap bgcolor="#CCCCCC">
+            <a href="http://www.cgiscript.net" target=_blank>WWW.CGISCRIPT.NET, LLC</a>
+            </td>
+          </tr>
+        </table>
+        </td></tr>
+
+
+  </table>
+    </center>
+  </div>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+--- 
+__version: '2.1'
+shopeconcrete.com: 
+  account_count: 1
+  accounts: 
+    shope161: 
+      disk_mtime: '1446676706'
+      diskused: 0
+  disk_mtime: '1446676706'
+  passwd_mtime: '1446676706'
+  quota_mtime: '1446676706'

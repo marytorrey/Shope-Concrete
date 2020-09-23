@@ -1,0 +1,177 @@
+<html>
+
+<head>
+<title>csFormbuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css"></head>
+<body>
+<form name="form1" method="post" action="in(cgiurl)">
+  <input type="hidden" name="command" value="in(command)">
+  <input type="hidden" name="id" value="in(id)">
+  <input type="hidden" name="fid" value="in(fid)">
+  <input type="hidden" name="addfield" value="in(addfield)">
+
+
+  <div align="center">
+    <table width=750 border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse">
+
+
+  <center>
+     <tr>
+      <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000">
+        <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#E2E2E2">
+        <p align="center"><b>Form Field Configuration</b>
+        </td>
+      </tr>
+      </center><tr><td width="100%">
+        <table border="0" cellpadding="3" cellspacing="0">
+        <tr>
+          <td width="100%" align="left" valign="top">
+            <div align="center">
+                  <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                    <center>
+                      <tr> 
+                        <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2"> 
+                          <table border="0" width="100%" cellspacing="0" cellpadding="3">
+                            <tr> 
+                              <td nowrap valign="middle" align="left"><b>Add/Edit 
+                                Radio Button</b></td>
+                              <td nowrap valign="middle" align="right"> </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </center>
+                    <tr> 
+                      <center>
+                        <td align="center" valign="middle" nowrap><b>Field Information</b></td>
+                      </center>
+                      <td align="left" valign="middle" nowrap> 
+                        <p align="left"><b>Configuration</b> 
+                      </td>
+                    </tr>
+                    <center>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Field Label:</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <input type="text" name="fieldlabel" value="in(fieldlabel)">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="right" valign="middle" nowrap><b>Label 
+						Alignment:</b></td>
+                        <td align="left" valign="middle" nowrap>
+                          <input type="radio" name="labelalign" value="L" in(labelalignL)>Left&nbsp;
+							<input type="radio" name="labelalign" value="C" in(labelalignC)>Center&nbsp;
+							<input type="radio" name="labelalign" value="R"  in(labelalignR)>Right&nbsp;
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Field Name:</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <input type="text" name="fieldname" value="in(fieldname)">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="top" nowrap><b>Probable Answers:</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <textarea rows="2" name="fieldanswers" cols="50">in(fieldanswers)</textarea>
+                          <br>
+                          <input type="radio" name="fielddirection" value="D" in(fielddirectionD)>
+                          Down 
+                          <input type="radio" name="fielddirection" value="R" in(fielddirectionR)>
+                          Right </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Other Response:</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <input type="radio" name="fieldother" value="N" in(fieldotherN)> No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          <input type="radio" name="fieldother" value="Y" in(fieldotherY)> 
+							Yes&nbsp;&nbsp;&nbsp;&nbsp;<font size="1"> Note: If Yes 
+                          is specified &quot;Other&quot; will be added to the 
+                          options automatically.</font><br>
+                          Text Field Display Length: 
+                          <input type="text" name="fieldotherlength" size="3" value="in(fieldotherlength)">
+                          &nbsp;&nbsp;&nbsp;&nbsp; Text Field Maximum Characters: 
+                          <input type="text" name="fieldothermax" size="3" value="in(fieldothermax)">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Response Required:</b></td>
+                        <td align="left" valign="middle" nowrap>
+                        <input type="radio" name="fieldrequired" value="N" in(fieldrequiredN)>
+                          No
+                          <input type="radio" value="Y" name="fieldrequired" in(fieldrequiredY)>
+                          Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap>&nbsp;</td>
+                        <td align="left" valign="middle"> Note: If this question 
+                          is mandatory then select Yes. This will force them to 
+                          respond before be able to submit the form. </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Label Position:</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <input type="radio" name="fieldlposition" value="L" in(fieldlpositionL)>
+                          Left&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="radio" value="T" name="fieldlposition" in(fieldlpositionT)>
+                          Top&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="radio" name="fieldlposition" value="R" in(fieldlpositionR)>
+                          Right &nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="radio" name="fieldlposition" value="B" in(fieldlpositionB)>
+                          Bottom</td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap>&nbsp;</td>
+                        <td align="left" valign="middle"> Note: Specify the question 
+                          position relative to the form field. </td>
+                      </tr>
+                      <tr>
+                        <td align="right" valign="middle" nowrap><b>Field Position:</b></td>
+                        <td align="left" valign="middle">
+                          <input type="radio" name="fieldposition" value="N" in(fieldpositionN)>
+                          New Line&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="radio" value="S" name="fieldposition" in(fieldpositionS)>
+                          Same Line As Previous Field</td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap><b>Question Description 
+                          (optional):</b></td>
+                        <td align="left" valign="middle" nowrap> 
+                          <textarea rows="2" name="fieldtip" cols="50">in(fieldtip)</textarea>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="right" valign="middle" nowrap>&nbsp;</td>
+                        <td align="left" valign="middle"> Note: If you would like 
+                          to describe what this field is for you can enter text 
+                          above that will be displayed in a popup window when 
+                          the <img border="0" src="in(imageurl)/desc.gif" width="16" height="16">
+                          image is clicked. Simply add text to activate this field. 
+                        </td>
+                      </tr>
+                    </center>
+                  </table>
+            </div>
+            
+            </td>
+          </tr>
+          <tr>
+            <td align="center" nowrap bgcolor="#CCCCCC">
+            <input class="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" type="submit" value="Save" name="SubmitConfiguration">            <input type="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" class="button" value="Cancel" onClick="javascript:window.location='in(cgiurl)?command=showfieldconfig&id=in(id)';"></td>
+          </tr>
+        </table>
+        </td></tr>
+        
+    
+  </table>
+  </div>
+  </form>
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>csFormBuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css">
+</head>
+<body>
+
+<form name="form1" method="post" action="in(cgiurl)">
+  <input type="hidden" name="command" value="showlinks">
+    
+  <table align=center border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse">
+    <center>
+      <tr> 
+        <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000"> 
+          <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b> 
+        </td>
+      </tr>
+      <tr> 
+        <td width="100%" bgcolor="#E2E2E2"> 
+          <p align="center"><b>Links Wizard™</b> 
+        </td>
+      </tr>
+      <tr> 
+        <td width="100%"> 
+          <table border="0" cellpadding="3" cellspacing="0" width=100%>
+            <tr> 
+              <td width="100%" align="left" valign="top"> 
+                <div align="center"> 
+                  <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                    <tr> 
+                      <td align="right" valign="top" nowrap> 
+                        Form:</td>
+                      <td align="left" valign="top"> 
+                        <select name=formid onchange="document.form1.submit();">
+                        in(formidoptions)
+                        </select>
+                        </td>
+                    </tr>
+                    <tr> 
+                      <td align="left" valign="top" nowrap> 
+                        <div align="right">Direct Link:<br>
+                          <input type="button" class=button name="S1" value="Grab Link" onclick="document.form1.dl.focus();document.form1.dl.select()">
+                        </div>
+                      </td>
+                      <td align="left" valign="top"> 
+                        <textarea name="dl" cols="50" rows="2" wrap=off>in(directlink)</textarea>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td align="left" valign="top" nowrap> 
+                        <div align="right">Server Side Include (SSI) Link:<br>
+                          <input type="button" class=button name="S122" value="Grab Link" onclick="document.form1.ssi.focus();document.form1.ssi.select()">
+                        </div>
+                      </td>
+                      <td align="left" valign="top"> 
+                        <textarea name="ssi" cols="50" rows="2" wrap=off>in(serversideinclude)</textarea>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td align="left" valign="top" nowrap> 
+                        <div align="right">JavaScript Link:<br>
+                          <input type="button" class=button name="S12" value="Grab Link" onclick="document.form1.js.focus();document.form1.js.select()">
+                        </div>
+                      </td>
+                      <td align="left" valign="top"> 
+                        <textarea name="js" cols="50" rows="2" wrap=off>in(javascript)</textarea>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td align="left" valign="top" nowrap> 
+                        <div align="right">PHP Link:<br>
+                          <input type="button" class=button name="S123" value="Grab Link" onclick="document.form1.php.focus();document.form1.php.select()">
+                          <br>
+                        </div>
+                      </td>
+                      <td align="left" valign="top"> 
+                        <textarea name="php" cols="50" rows="2" wrap=off>in(PHP)</textarea>
+                        <br>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+      <tr> 
+        <td align="center" nowrap bgcolor="#CCCCCC"> 
+          <input type="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" class="button" value="Home" onClick="javascript:window.location='in(cgiurl)?command=manage';">
+        </td>
+      </tr>
+    </center>
+  </table>
+		</form>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<html>
+
+<head>
+<title>csFormbuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css">
+</head>
+
+<body>
+
+  <center>
+
+
+  <table border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse" width=700>
+     <tr>
+      <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000">
+        <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#E2E2E2">
+        <p align="center"><b>Edit Form</b>
+        </td>
+      </tr>
+    <tr>
+      <td width="100%" bgcolor="#FFFFFF" align=center>
+		<input type=button style="display:none" id=sfconfig class=button value="Show Field Configuration" onClick="document.getElementById('ssconfig').style.display='inline';document.getElementById('sfconfig').style.display='none';document.getElementById('fieldedits').style.display='inline';document.getElementById('styleedits').style.display='none'"> <input type=button  id=ssconfig class=button value="Show Style Configuration" onClick="document.getElementById('ssconfig').style.display='none';document.getElementById('sfconfig').style.display='inline';document.getElementById('fieldedits').style.display='none';document.getElementById('styleedits').style.display='inline';document.getElementById('styleedits').style.overflow='auto'">
+        </td>
+      </tr>
+     <tr>
+        <td width="100%">
+		<div id=fieldedits style="display:inline">
+<form name="form2" method="post" action="in(cgiurl)">
+  <input type="hidden" name="command" value="in(command)">
+  <input type="hidden" name="id" value="in(id)">
+        <table border="0" cellpadding="3" cellspacing="0" width=100%>
+          <tr>
+            <td width="100%" align="left" valign="top">
+            <div align="center">
+                  <table width=100% border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                    <tr>
+                      <td align="left" nowrap colspan="3" valign="middle" bgcolor="#E2E2E2">
+                        <table border="0" width="100%" cellspacing="0" cellpadding="5">
+                          <tr>
+                            <td nowrap valign="middle" align="left"><b>Form Field
+                              List</b></td>
+                            <td nowrap valign="middle" align="center">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td nowrap>Add a Field:&nbsp;</td>
+                                  <td nowrap>
+                                    <select size="1" name="addfield" onChange="if(this.options.selectedIndex>0){document.form2.command.value='showaddfield';document.form2.submit();}">
+                                      <option value=""></option>
+                                      <OPTGROUP label="Standard Fields">
+                                      <option value="TextField">Text Field</option>
+                                      <option value="RadioButton">Radio Button</option>
+                                      <option value="Checkbox">Checkbox</option>
+                                      <option value="Dropdown">Dropdown</option>
+                                      <option value="TextArea">TextArea</option>
+                                      </OPTGROUP> <OPTGROUP label="Special Fields">
+                                      <option value="CalculatedField">Calculated Field</option>
+                                      <option value="DateField">Date Picker</option>
+                                      <option value="EmailAddress">Email Address</option>
+                                      <option value="UploadField">File Upload Field</option>
+                                      <option value="HiddenField">Hidden Field</option>
+                                      <option value="ImageVerify">Image Verification</option>
+                                      <option value="PhoneField">Phone/Fax Number</option>
+                                      <option value="TimeField">Time</option>
+                                      </OPTGROUP>
+                                      <OPTGROUP label="Misc Dropdowns">
+                                      <option value="State">State</option>
+                                      <option value="Country">Country</option>
+                                      <option value="Misc-Prefix">Prefix</option>
+                                      <option value="Misc-Urgency">Urgency</option>
+                                      <option value="Misc-Priority">Priority</option>
+									  <option value="Misc-Shipping">Shipping Methods</option>
+									  <option value="Misc-Response">Response Required</option>
+									  <option value="Misc-Gender">Gender</option>
+									  <option value="Misc-Rating">Rating</option>
+                                      </OPTGROUP> <OPTGROUP label="Formatting">
+                                      <option value="TextHTML">Text/HTML (instructions, etc.)</option>
+                                      <option value="BlankLine">Blank Line</option>
+                                      <option value="HorizontalLine">Horizontal Line</option>
+                                      </OPTGROUP>
+                                    </select>
+                                  </td>
+                                  </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle" nowrap><b>Field Label</b></td>
+                      <td align="center" valign="middle" nowrap><b>Type</b></td>
+                      <td align="center" valign="middle" nowrap>
+                        <p align="center"><b>Field Actions</b>
+                      </td>
+                    </tr>
+                    in(fline)
+                  </table>
+            </div>
+            </td>
+          </tr>
+        </table>
+</form>
+</div>
+<div id="styleedits" style="width:690;height:300;overflow: auto;display:none">
+<form name="form1" method="post" action="in(cgiurl)">
+<input type="hidden" name="command" value="in(command)">
+<input type="hidden" name="id" value="in(id)">
+
+            <table border="0" cellpadding="3" cellspacing="0" width=100%>
+              <tr>
+              <td width="100%" align="left" valign="top">
+                <div align="center">
+                    <table width=100% border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                      <tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Label Style</b> </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Font</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="labelfont" value="in(labelfont)">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Size</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="labelsize" value="in(labelsize)" size="3">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Foreground Color</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="labelforecolor" value="in(labelforecolor)">&nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Background Color</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="labelbackcolor" value="in(labelbackcolor)">&nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Style</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="checkbox" name="labelbold" value="checked" in(labelbold)>
+                        Bold
+                        <input type="checkbox" name="labelitalic" value="checked" in(labelitalic)>
+                        Italic
+                        <input type="checkbox" name="labelunderline" value="checked" in(labelunderline)>
+                        Underline</td>
+                    </tr>
+                    <tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Field Style</b> </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Font</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="fieldfont" value="in(fieldfont)">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Size</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="fieldsize" value="in(fieldsize)" size="3">
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Foreground Color</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="fieldforecolor" value="in(fieldforecolor)">&nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Background Color</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="fieldbackcolor" value="in(fieldbackcolor)">&nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Active Background Color</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="text" name="fieldfocusbackcolor" value="in(fieldfocusbackcolor)">&nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top" nowrap width="30%">
+                          <div align="right">Style</div>
+                      </td>
+                        <td align="left" valign="top" width="70%">
+                          <input type="checkbox" name="fieldbold" value="checked" in(fieldbold)>
+                        Bold
+                        <input type="checkbox" name="fielditalic" value="checked" in(fielditalic)>
+                        Italic
+                        <input type="checkbox" name="fieldunderline" value="checked" in(fieldunderline)>
+                        Underline</td>
+                    </tr>
+                    	<tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Button Style</b> </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Button Alignment</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type=radio name=buttonalign value="left" in(buttonalignleft)> Left
+                        <input type=radio name=buttonalign value="center" in(buttonaligncenter)> Center
+                        <input type=radio name=buttonalign value="right" in(buttonalignright)> Right
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Submit Button Text</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttontext" value="in(buttontext)" size="20">
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Back Button Text</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="backbuttontext" value="in(backbuttontext)" size="20">
+						(leave blank for no back button)</td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Reset Button Text</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="resetbuttontext" value="in(resetbuttontext)" size="20">
+						(leave blank for no reset button)</td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Font</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttonfont" value="in(buttonfont)" size="20">
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Size</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttonsize" value="in(buttonsize)" size="3">
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Foreground Color</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttonforecolor" value="in(buttonforecolor)" size="20">&nbsp;
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Background Color</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttonbackcolor" value="in(buttonbackcolor)" size="20">&nbsp;
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Active Background Color</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="buttonfocuscolor" value="in(buttonfocuscolor)" size="20">&nbsp;
+                      </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Style</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="checkbox" name="buttonbold" value="checked" in(buttonbold)>
+                        Bold
+                        <input type="checkbox" name="buttonitalic" value="checked" in(buttonitalic)>
+                        Italic
+                        <input type="checkbox" name="buttonunderline" value="checked" in(buttonunderline)>
+                        Underline</td>
+                    	</tr>
+                    	<tr>
+                      <td align="left" nowrap colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Mandatory Fields</b> </td>
+                    	</tr>
+						<tr>
+                      <td align="left" valign="top" nowrap width="19%">
+                        <div align="right">Mandatory Field Symbol</div>
+                      </td>
+                      <td align="left" valign="top" width="81%">
+                        <input type="text" name="mandatorysymbol" value="in(mandatorysymbol)" size="20">&nbsp;
+                      </td>
+                    	</tr>
+                    <tr>
+                      <td align="left" colspan="2" valign="middle" bgcolor="#E2E2E2">
+                        <b>Template</b>(Hint: You can use text or raw HTML code here) </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" nowrap colspan="2">
+                      <input class="button" type="button" value="HMTL Editor" onClick="ShowEditor('formtemplate',1);"><br>
+                          <textarea name="formtemplate" cols="80" rows="20">in(formtemplate)</textarea>
+                        <br>
+                      </td>
+                    </tr>
+                  </table>
+                  </div>
+              </td>
+            </tr>
+          </table>
+
+</form>
+</div>
+        </td>
+     </tr>
+          <tr>
+            <td align="center" nowrap bgcolor="#CCCCCC">
+         <input class="button"  onMouseOver="className='buttonOver';" onMouseOut="className='button';" type="button" value="Save Form" onClick="javascript:document.form1.submit();">           <input type="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" class="button" value="Home" onClick="javascript:window.location='in(cgiurl)?command=manage';"></td>
+  </tr>
+      <tr>
+        <td width="100%">
+        <table border="1" width="100%" cellspacing="0" cellpadding="5">
+          <tr>
+              <td width="100%"><b>Form Preview - in(formname)</b></td>
+          </tr>
+          <tr>
+              <td width="100%">
+              <iframe name=formpv width=100% height=300 src="in(cgiurl)?command=previewform&id=in(id)"></iframe>
+            </td>
+          </tr>
+        </table>
+        </td></tr>
+
+
+  </table>
+    </center>
+
+
+<script language=javascript>
+
+function Delete(id){
+if(confirm("Are you sure you want to delete this field?")){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=deletefield&id=in(id)&fid="+id+"&rnd="+rndURL;
+   	window.location = NewURL;
+	}
+}
+
+function Copy(id){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=copyfield&id=in(id)&fid="+id+"&rnd="+rndURL;
+   	window.location = NewURL;
+}
+
+function ShowEdit(id){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=showfieldedit&id=in(id)&fid="+id+"&rnd="+rndURL;
+   	window.location = NewURL;
+}
+
+function MoveUp(id){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=movefieldup&id=in(id)&fid="+id+"&rnd="+rndURL;
+   	window.location = NewURL;
+}
+
+function MoveDown(id){
+	var rndURL = (1000*Math.random());
+	var NewURL = "in(cgiurl)?command=movefielddown&id=in(id)&fid="+id+"&rnd="+rndURL;
+   	window.location = NewURL;
+}
+
+function ShowEditor(fld,t){
+var rndURL = (1000*Math.random());
+var windowURL = "in(cgiurl)?command=showeditor&id=in(id)&database=in(database)&bodyMode="+t+"&fld="+escape(fld)+"&rnd="+rndURL;
+newWindow = window.open(windowURL,'preview','width=800,height=600,location=0,directories=0,status=0,menuBar=0,scrollBars=yes,resizable=yes');
+newWindow.focus();
+}
+</script>
+
+</body>
+
+</html>

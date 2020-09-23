@@ -1,0 +1,3 @@
+dev                      blocks      quota      limit      grace      files      quota      limit      grace
+/dev/mapper/vg_dprhcp003-lv_root
+                         177072    1048576    1048576                  5692     100000     200000           

@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<title>csFormbuilder by CGIScript.net</title>
+<link rel="stylesheet" type="text/css" href="in(imageurl)/styles.css"></head>
+<body>
+
+<form name="form1" method="post" action="in(cgiurl)">
+  <input type="hidden" name="command" value="in(command)">
+  <input type="hidden" name="id" value="in(id)">
+  <input type="hidden" name="fid" value="in(fid)">
+  <input type="hidden" name="addfield" value="in(addfield)">
+  <input type="hidden" name="fieldname" value="TextHTML">
+
+  <div align="center">
+    <table border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" style="border-collapse: collapse">
+
+
+  <center>
+     <tr>
+      <td width="100%" bgcolor="#808080" style="font-family: Tahoma, sans-serif; font-size: 8pt; scrollbar-arrow-color: WHITE; scrollbar-track-color: #D6D6D6; scrollbar-shadow-color: #D6D6D6; scrollbar-face-color: #000000; scrollbar-highlight-color: #D6D6D6; scrollbar-darkshadow-color: #000000; scrollbar-3dlight-color: #000000">
+        <p align="center"><b><font color="#FFFFFF">csFormBuilder</font></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#E2E2E2">
+        <p align="center"><b>Form Field Configuration</b>
+        </td>
+      </tr>
+      </center><tr><td width="100%">
+        <table border="0" cellpadding="3" cellspacing="0">
+        <tr>
+          <td width="100%" align="left" valign="top">
+            <div align="center">
+                  <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080">
+                    <center>
+                      <tr>
+                        <td align="left" nowrap valign="middle" bgcolor="#E2E2E2">
+                          <table border="0" width="100%" cellspacing="0" cellpadding="3">
+                            <tr>
+                              <td nowrap valign="middle" align="left"><b>
+								Add/Edit Text/HTML </b></td>
+                              <td nowrap valign="middle" align="right"> </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </center>
+                    <center>
+                      <tr>
+                        <td align="left" valign="middle" nowrap>
+                        <input class="button" type="button" value="HMTL Editor" onClick="ShowEditor('TextHTML',1);"><br>
+						<textarea rows="9" name="TextHTML" cols="81">in(TextHTML)</textarea>
+                        </td>
+                      </tr>
+                    </center>
+                  </table>
+            </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td align="center" nowrap bgcolor="#CCCCCC">
+            <input class="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" type="submit" value="Save" name="SubmitConfiguration">            <input type="button" onMouseOver="className='buttonOver';" onMouseOut="className='button';" class="button" value="Cancel" onClick="javascript:window.location='in(cgiurl)?command=showfieldconfig&id=in(id)';"></td>
+          </tr>
+        </table>
+        </td></tr>
+
+
+  </table>
+  </div>
+  </form>
+<script language=javascript>
+function ShowEditor(fld,t){
+var rndURL = (1000*Math.random());
+var windowURL = "in(cgiurl)?command=showeditor&id=in(id)&database=in(database)&bodyMode="+t+"&fld="+escape(fld)+"&rnd="+rndURL;
+newWindow = window.open(windowURL,'preview','width=800,height=600,location=0,directories=0,status=0,menuBar=0,scrollBars=yes,resizable=yes');
+newWindow.focus();
+}
+</script>
+
+</body>
+</html>
