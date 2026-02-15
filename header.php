@@ -113,7 +113,7 @@ function getMetaDescription($currentPage){
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title><?php getTitle($currentPage); ?></title>
+    <title><?php getTitle($currentPage);?></title>
     <?php $canonical = 'https://shopeconcrete.com' . $_SERVER['REQUEST_URI']; ?>
     <link rel="canonical" href="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="description" content="<?php echo htmlspecialchars(getMetaDescription($currentPage), ENT_QUOTES, 'UTF-8'); ?>">
