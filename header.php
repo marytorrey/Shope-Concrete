@@ -6,110 +6,114 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $currentPage = basename($path);
 if ($currentPage === '' || $currentPage === false) { $currentPage = 'index.php'; }
 
-function getTitle($currentPage){
-    switch ($currentPage) {
-        case 'index.php':
-            echo 'Home | Shope Concrete - Puyallup, WA';
-            break;
-        case 'about.php':
-            echo 'About | Shope Concrete - Puyallup, WA';
-            break;
-        case 'contact.php':
-            echo 'Contact | Shope Concrete - Puyallup, WA';
-            break;
-        case 'employment.php':
-            echo 'Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'privacy.php':
-            echo 'Privacy Policy | Shope Concrete - Puyallup, WA';
-            break;
-        case 'startercat.php':
-            echo 'E-Catalog | Shope Concrete - Puyallup, WA';
-            break;
-        case 'catalog1.php':
-            echo 'Concrete Pipe | Shope Concrete - Puyallup, WA';
-            break;
-        case 'catalog2.php':
-            echo 'Catch Basins | Shope Concrete - Puyallup, WA';
-            break;
-        case 'catalog3.php':
-            echo 'Manholes | Shope Concrete - Puyallup, WA';
-            break;
-        case 'catalog4.php':
-            echo 'Maintenance Holes | Shope Concrete - Puyallup, WA';
-            break;
-        case 'catalog5.php':
-            echo 'Concrete Products | Shope Concrete - Puyallup, WA';
-            break;
-        case 'qc.php':
-            echo 'Quality Control | Shope Concrete - Puyallup, WA';
-            break;
-        case '404.php':
-            echo 'Page Not Found | Shope Concrete - Puyallup, WA';
-            break;
-        case 'aboutTwirlyBoxes.php':
-            echo 'Our Sister Companies | Shope Concrete - Puyallup, WA';
-            break;
-        case 'verticleTwirlyBoxes.php':
-            echo 'Our Suppliers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'disbatch.php':
-            echo 'Assistant Dispatcher Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'drafter.php':
-            echo 'CAD Drafter Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'driver.php':
-            echo 'Class A Driver Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'frontdesk.php':
-            echo 'Front Desk & Inside Sales Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'general.php':
-            echo 'General Labor Careers | Shope Concrete - Puyallup, WA';
-            break;
-        case 'video.php':
-            echo 'About Us Video | Shope Concrete - Puyallup, WA';
-            break;
-        default:
-            echo 'Shope Concrete - Puyallup, WA';
-            break;
+if (!function_exists('getTitle')) {
+    function getTitle($currentPage){
+        switch ($currentPage) {
+            case 'index.php':
+                echo 'Home | Shope Concrete - Puyallup, WA';
+                break;
+            case 'about.php':
+                echo 'About | Shope Concrete - Puyallup, WA';
+                break;
+            case 'contact.php':
+                echo 'Contact | Shope Concrete - Puyallup, WA';
+                break;
+            case 'employment.php':
+                echo 'Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'privacy.php':
+                echo 'Privacy Policy | Shope Concrete - Puyallup, WA';
+                break;
+            case 'startercat.php':
+                echo 'E-Catalog | Shope Concrete - Puyallup, WA';
+                break;
+            case 'catalog1.php':
+                echo 'Concrete Pipe | Shope Concrete - Puyallup, WA';
+                break;
+            case 'catalog2.php':
+                echo 'Catch Basins | Shope Concrete - Puyallup, WA';
+                break;
+            case 'catalog3.php':
+                echo 'Manholes | Shope Concrete - Puyallup, WA';
+                break;
+            case 'catalog4.php':
+                echo 'Maintenance Holes | Shope Concrete - Puyallup, WA';
+                break;
+            case 'catalog5.php':
+                echo 'Concrete Products | Shope Concrete - Puyallup, WA';
+                break;
+            case 'qc.php':
+                echo 'Quality Control | Shope Concrete - Puyallup, WA';
+                break;
+            case '404.php':
+                echo 'Page Not Found | Shope Concrete - Puyallup, WA';
+                break;
+            case 'aboutTwirlyBoxes.php':
+                echo 'Our Sister Companies | Shope Concrete - Puyallup, WA';
+                break;
+            case 'verticleTwirlyBoxes.php':
+                echo 'Our Suppliers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'disbatch.php':
+                echo 'Assistant Dispatcher Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'drafter.php':
+                echo 'CAD Drafter Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'driver.php':
+                echo 'Class A Driver Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'frontdesk.php':
+                echo 'Front Desk & Inside Sales Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'general.php':
+                echo 'General Labor Careers | Shope Concrete - Puyallup, WA';
+                break;
+            case 'video.php':
+                echo 'About Us Video | Shope Concrete - Puyallup, WA';
+                break;
+            default:
+                echo 'Shope Concrete - Puyallup, WA';
+                break;
+        }
     }
 }
 
-function getMetaDescription($currentPage){
-    switch ($currentPage) {
-        case 'index.php':
-            return 'Shope Concrete: Precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, WA.';
-        case 'about.php':
-            return 'Learn about Shope Concrete, a leading precast concrete manufacturer in Puyallup, WA. History, mission, and team.';
-        case 'contact.php':
-            return 'Contact Shope Concrete in Puyallup, WA for precast concrete products, sales, and support. Get directions and office hours.';
-        case 'privacy.php':
-            return 'Read Shope Concrete’s privacy policy, including how we handle website data and inquiries.';
-        case 'catalog1.php':
-            return 'Explore Shope Concrete\'s precast concrete pipe catalog. Sizes, specifications, and applications for drainage and infrastructure.';
-        case 'catalog2.php':
-            return 'Discover Shope Concrete\'s precast catch basins. WSDOT Type 1, Type 2, and custom solutions for stormwater management.';
-        case 'catalog3.php':
-            return 'View Shope Concrete\'s precast manholes. WSDOT Type 1, Type 2, Type 3, and custom maintenance hole designs.';
-        case 'catalog4.php':
-            return 'Shope Concrete\'s precast maintenance holes and specialized drainage structures. High-quality solutions for various applications.';
-        case 'catalog5.php':
-            return 'Browse Shope Concrete\'s full range of precast concrete products. Custom solutions, vaults, barriers, and more.';
-        case 'startercat.php':
-            return 'Shope Concrete\'s comprehensive e-catalog for all precast concrete products. Browse pipe, manholes, catch basins, and custom items.';
-        case 'employment.php':
-            return 'Join the Shope Concrete team! Explore career opportunities in precast concrete manufacturing, sales, and operations in Puyallup, WA.';
-        default:
-            return 'Shope Concrete manufactures precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, Washington.';
+if (!function_exists('getMetaDescription')) {
+    function getMetaDescription($currentPage){
+        switch ($currentPage) {
+            case 'index.php':
+                return 'Shope Concrete: Precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, WA.';
+            case 'about.php':
+                return 'Learn about Shope Concrete, a leading precast concrete manufacturer in Puyallup, WA. History, mission, and team.';
+            case 'contact.php':
+                return 'Contact Shope Concrete in Puyallup, WA for precast concrete products, sales, and support. Get directions and office hours.';
+            case 'privacy.php':
+                return 'Read Shope Concrete’s privacy policy, including how we handle website data and inquiries.';
+            case 'catalog1.php':
+                return "Explore Shope Concrete's precast concrete pipe catalog. Sizes, specifications, and applications for drainage and infrastructure.";
+            case 'catalog2.php':
+                return "Discover Shope Concrete's precast catch basins. WSDOT Type 1, Type 2, and custom solutions for stormwater management.";
+            case 'catalog3.php':
+                return "View Shope Concrete's precast manholes. WSDOT Type 1, Type 2, Type 3, and custom maintenance hole designs.";
+            case 'catalog4.php':
+                return "Shope Concrete's precast maintenance holes and specialized drainage structures. High-quality solutions for various applications.";
+            case 'catalog5.php':
+                return "Browse Shope Concrete's full range of precast concrete products. Custom solutions, vaults, barriers, and more.";
+            case 'startercat.php':
+                return "Shope Concrete's comprehensive e-catalog for all precast concrete products. Browse pipe, manholes, catch basins, and custom items.";
+            case 'employment.php':
+                return 'Join the Shope Concrete team! Explore career opportunities in precast concrete manufacturing, sales, and operations in Puyallup, WA.';
+            default:
+                return 'Shope Concrete manufactures precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, Washington.';
+        }
     }
 }
 ?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title><?php getTitle($currentPage);?></title>
+    <title><?php getTitle($currentPage); ?></title>
     <link rel="canonical" href="https://shopeconcrete.com<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="description" content="<?php echo htmlspecialchars(getMetaDescription($currentPage), ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="format-detection" content="telephone=no">
@@ -180,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </li>
                     </ul>
                   </div>
-				<!-- facebook, twitter, google+, vimeo, youtube, pinteret
+					<!-- facebook, twitter, google+, vimeo, youtube, pinteret
                   <div class="rd-navbar-top-panel__right">
                     <ul class="list-inline-xxs">
                       <li><a class="icon icon-xxs icon-gray-darker fa fa-facebook" href="#"></a></li>
@@ -191,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <li><a class="icon icon-xxs icon-gray-darker fa fa-pinterest-p" href="#"></a></li>
                     </ul>
                   </div>
-					-->
+						-->
                 </div>
               </div>
             </div>
@@ -215,48 +219,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
                       <label class="form-label" for="rd-navbar-search-form-input">Enter keyword</label>
                       <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                      <button class="rd-search__submit" type="submit"></button>
                     </div>
-                    <button class="rd-search__submit" type="submit"></button>
-                  </form>
-                  <div class="rd-navbar-fixed--hidden">
-                    <button class="rd-navbar-search__toggle" data-custom-toggle=".rd-navbar-search-wrap" data-custom-toggle-disable-on-blur="true"></button>
-                  </div>
+                  </form><span class="rd-navbar-live-search-toggle" data-rd-navbar-toggle=".rd-navbar-search-live"></span>
                 </div> -->
-
-				<!-- Npca -->
-				  <div class="rd-navbar-top-panel__right">
-                    <ul class="list-inline-xxs">
-                      <li>
-						  <article class="post-link-mt" style="height: 50px; width: 90px">
-						   <!-- Post Link-->
-							<a class="" href="images/Shope concrete certification.PNG" data-lightgallery="item">
-							<figure><img src="images/NPCA-Plant-Cert-logo.gif" width="45px" height="25px"/>
-							 </figure>
-							</a>
-
-                		</article>
-						  <!--<a class="icon icon-xxs" href="#"><img src="images/NPCA-Plant-Cert-logo.gif" alt="NPCA Certified" height="50px" width="90px"></a>-->
-					  </li>
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="startercat.php">E-Catalog</a>
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="catalog1.php">Concrete Pipe</a></li>
+                      <li><a href="catalog2.php">Catch Basins</a></li>
+                      <li><a href="catalog3.php">Manholes</a></li>
+                      <li><a href="catalog4.php">Maintenance Holes</a></li>
+                      <li><a href="catalog5.php">More Products</a></li>
                     </ul>
-                  </div>
-				<!-- end NPCA -->
-                <div class="rd-navbar-search_collapsable">
-                  <ul class="rd-navbar-nav">
-                    <li><a href="index.php">Home</a>
-
-                    </li>
-                    <li><a href="about.php">About</a>
-                    </li>
-                    <?php include 'quicklinks.php';?>
-				<!-- QC Page
-							<li><a href="qc.php">QC Info</a>
-		                      <ul class="rd-navbar-dropdown">
-		                        <li><a href="404.php">There is a new page. What do you want Eric Armstrong??</a>
-		                        </li>
-		                      </ul>
-		                    </li>
-				-->
-
-                    <li><a href="startercat.php">Catalog</a>
-                      <ul class="rd-navbar-megamenu">
-						<li>
+                  </li>
+                  <li><a href="qc.php">Quality Control</a></li>
+                  <li><a href="employment.php">Careers</a></li>
+                  <li><a href="contact.php">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
