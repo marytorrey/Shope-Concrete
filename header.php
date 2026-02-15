@@ -77,12 +77,41 @@ function getTitle($currentPage){
     }
 }
 
+function getMetaDescription($currentPage){
+    switch ($currentPage) {
+        case 'index.php':
+            return 'Shope Concrete: Precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, WA.';
+        case 'about.php':
+            return 'Learn about Shope Concrete, a leading precast concrete manufacturer in Puyallup, WA. History, mission, and team.';
+        case 'contact.php':
+            return 'Contact Shope Concrete in Puyallup, WA for precast concrete products, sales, and support. Get directions and office hours.';
+        case 'privacy.php':
+            return 'Read Shope Concrete’s privacy policy, including how we handle website data and inquiries.';
+        case 'catalog1.php':
+            return 'Explore Shope Concrete\'s precast concrete pipe catalog. Sizes, specifications, and applications for drainage and infrastructure.';
+        case 'catalog2.php':
+            return 'Discover Shope Concrete\'s precast catch basins. WSDOT Type 1, Type 2, and custom solutions for stormwater management.';
+        case 'catalog3.php':
+            return 'View Shope Concrete\'s precast manholes. WSDOT Type 1, Type 2, Type 3, and custom maintenance hole designs.';
+        case 'catalog4.php':
+            return 'Shope Concrete\'s precast maintenance holes and specialized drainage structures. High-quality solutions for various applications.';
+        case 'catalog5.php':
+            return 'Browse Shope Concrete\'s full range of precast concrete products. Custom solutions, vaults, barriers, and more.';
+        case 'startercat.php':
+            return 'Shope Concrete\'s comprehensive e-catalog for all precast concrete products. Browse pipe, manholes, catch basins, and custom items.';
+        case 'employment.php':
+            return 'Join the Shope Concrete team! Explore career opportunities in precast concrete manufacturing, sales, and operations in Puyallup, WA.';
+        default:
+            return 'Shope Concrete manufactures precast concrete pipe, manholes, catch basins, and drainage products in Puyallup, Washington.';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
     <title><?php getTitle($currentPage);?></title>
     <link rel="canonical" href="https://shopeconcrete.com<?= htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="description" content="<?= htmlspecialchars(getMetaDescription($currentPage), ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -219,78 +248,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="about.php">About</a>
                     </li>
                     <?php include 'quicklinks.php';?>
-			<!-- QC Page
-						<li><a href="qc.php">QC Info</a>
-	                      <ul class="rd-navbar-dropdown">
-	                        <li><a href="404.php">There is a new page. What do you want Eric Armstrong??</a>
-	                        </li>
-	                      </ul>
-	                    </li>
-			-->
+				<!-- QC Page
+							<li><a href="qc.php">QC Info</a>
+		                      <ul class="rd-navbar-dropdown">
+		                        <li><a href="404.php">There is a new page. What do you want Eric Armstrong??</a>
+		                        </li>
+		                      </ul>
+		                    </li>
+				-->
 
                     <li><a href="startercat.php">Catalog</a>
                       <ul class="rd-navbar-megamenu">
 						<li>
-                          <p class="rd-megamenu-header">WSDOT</p>
-                          <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 01 - 48 inch Type 1 Precast Manhole.pdf">48" Type 1 Precast Manhole</a></li>
-							<li><a href="pdf/Page 02 - 48 inch Type 3 Precast Manhole.pdf">48" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 03 - 54 inch Type 1 Precast Manhole.pdf">54" Type 1 Precast Manhole</a></li>
-							<li><a href="pdf/Page 04 - 54 inch Type 3 Precast Manhole.pdf">54" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 05 - 60 inch Type 3 Precast Manhole.pdf">60" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 06 - 60 inch Type 3 Modified Precast Manhole.pdf">60" Type 3M Precast Manhole</a></li>
-							<li><a href="pdf/Page 07 - 60 inch Type 1 Precast Manhole.pdf">60" Type 1 Precast Manhole</a></li>
-							<li><a href="pdf/Page 08 - 72 inch Type 3 Precast Manhole.pdf">72" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 09 - 72 inch Type 2 Precast Manhole.pdf">72" Type 2 Precast Manhole</a></li>
-							<li><a href="pdf/Page 10 - 84 inch Type 3 Precast Manhole.pdf">84" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 11 - 96 inch Type 3 Precast Manhole.pdf">96" Type 3 Precast Manhole</a></li>
-							<li><a href="pdf/Page 12 - 96 inch Type 2 Precast Manhole.pdf">96" Type 2 Precast Manhole</a></li>
-							<li><a href="pdf/Page 13 - 48 inch Precast Concrete Dry Well.pdf">48" Precast Concrete Dry Well</a></li>
-                          </ul>
-						</li>
-						<li>
-                          <p class="rd-megamenu-header">City of Seattle</p>
-                          <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 14 - Seattle Standard Plan 200a - 48 inch Type 204a Maintenance Hole.pdf">48" Type 204a Maintenance Hole</a></li>
-							<li><a href="pdf/Page 15 - Seattle Standard Plan 200b - 54 inch Type 204b Maintenance Hole.pdf">54" Type 204b Maintenance Hole</a></li>
-							<li><a href="pdf/Page 16 - Seattle Standard Plan 200c - 60 inch Type 204c Maintenance Hole.pdf">60" Type 204c Maintenance Hole</a></li>
-							<li><a href="pdf/Page 17 - Seattle Standard Plan 200d - 72 inch Type 204d Maintenance Hole.pdf">72" Type 204d Maintenance Hole</a></li>
-							<li><a href="pdf/Page 18 - Seattle Standard Plan 200e - 84 inch Type 204e Maintenance Hole.pdf">84" Type 204e Maintenance Hole</a></li>
-							<li><a href="pdf/Page 19 - Seattle Standard Plan 200f - 96 inch Type 204f Maintenance Hole.pdf">96" Type 204f Maintenance Hole</a></li>
-							<li><a href="pdf/Page 20 - Seattle Standard Plan 240 - Catch Basin Type 240.pdf">Catch Basin Type 240</a></li>
-							<li><a href="pdf/Page 21 - Seattle Standard Plan 241 - Catch Basin Type 241.pdf">Catch Basin Type 241</a></li>
-							<li><a href="pdf/Page 22 - Seattle Standard Plan 242 - Catch Basin Type 242.pdf">Catch Basin Type 242</a></li>
-                          </ul>
-						</li>
-						<li>
-                          <p class="rd-megamenu-header">City of Tacoma</p>
-                          <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 23 - Tacoma Standard Plan dr-03 - Catch Basin Type 1.pdf">Catch Basin Type 1</a></li>
-							<li><a href="pdf/Page 24 - Tacoma Standard Plan dr-04 - Catch Basin Type 2.pdf">Catch Basin Type 2</a></li>
-                          </ul>
-						</li>
-						<li>
-                          <p class="rd-megamenu-header">Miscellaneous</p>
-                          <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 25 - Area Drain.pdf">Area Drain</a></li>
-							<li><a href="pdf/Page 26 - Beehive Grate.pdf">Beehive Grate</a></li>
-							<li><a href="pdf/Page 27 - Concrete Pipe.pdf">Concrete Pipe</a></li>
-							<li><a href="pdf/Page 28 - Distribution Box.pdf">Distribution Box</a></li>
-							<li><a href="pdf/Page 29 - Grease Interceptor.pdf">Grease Interceptor</a></li>
-							<li><a href="pdf/Page 30 - Meter Box.pdf">Meter Box</a></li>
-							<li><a href="pdf/Page 31 - Oil Water Separator.pdf">Oil Water Separator</a></li>
-							<li><a href="pdf/Page 32 - Parking Bumper.pdf">Parking Bumper</a></li>
-							<li><a href="pdf/Page 33 - Septic Tank.pdf">Septic Tank</a></li>
-                          </ul>
-						</li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.php">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
