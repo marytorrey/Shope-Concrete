@@ -2,7 +2,9 @@
 //Gets the current URL and finds which page is the main page and returns back the title tag
     //Site Title ####Fix Substring below when you go live to 24 #### -->
 
-$currentPage = basename($_SERVER['REQUEST_URI']);
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$currentPage = basename($path);
+if ($currentPage === '' || $currentPage === false) { $currentPage = 'index.php'; }
 
 function getTitle($currentPage){
     switch ($currentPage) {
