@@ -114,7 +114,8 @@ if (!function_exists('getMetaDescription')) {
 <html class="wide wow-animation" lang="en">
   <head>
     <title><?php getTitle($currentPage); ?></title>
-    <link rel="canonical" href="https://shopeconcrete.com<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'); ?>">
+    <?php $canonical = 'https://shopeconcrete.com' . $_SERVER['REQUEST_URI']; ?>
+    <link rel="canonical" href="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="description" content="<?php echo htmlspecialchars(getMetaDescription($currentPage), ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -214,31 +215,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <!-- RD Search-->
                <!-- <div class="rd-navbar-search rd-navbar-search_toggled rd-navbar-search_not-collapsable">
-                  <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                  <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
                     <div class="form-wrap">
-                      <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                      <label class="form-label" for="rd-navbar-search-form-input">Enter keyword</label>
+                      <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
+                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
                       <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                      <button class="rd-search__submit" type="submit"></button>
                     </div>
-                  </form><span class="rd-navbar-live-search-toggle" data-rd-navbar-toggle=".rd-navbar-search-live"></span>
+                    <button class="rd-search__submit" type="submit"></button>
+                  </form>
                 </div> -->
-                <ul class="rd-navbar-nav">
-                  <li class="active"><a href="index.php">Home</a></li>
-                  <li><a href="about.php">About</a></li>
-                  <li><a href="startercat.php">E-Catalog</a>
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="catalog1.php">Concrete Pipe</a></li>
-                      <li><a href="catalog2.php">Catch Basins</a></li>
-                      <li><a href="catalog3.php">Manholes</a></li>
-                      <li><a href="catalog4.php">Maintenance Holes</a></li>
-                      <li><a href="catalog5.php">More Products</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="qc.php">Quality Control</a></li>
-                  <li><a href="employment.php">Careers</a></li>
-                  <li><a href="contact.php">Contact</a></li>
-                </ul>
+                <div class="rd-navbar-nav_collapsable">
+                  <ul class="rd-navbar-nav">
+                    <li class="active"><a href="index.php">Home</a>
+                    </li>
+                    <li><a href="about.php">About Us</a>
+                      <ul class="rd-navbar-dropdown">
+                        <li><a href="about.php">About Us</a>
+                        </li>
+                        <li><a href="qc.php">Quality Control</a>
+                        </li>
+                        <li><a href="video.php">About Us Video</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="startercat.php">E-Catalog</a>
+                      <ul class="rd-navbar-dropdown">
+                        <li><a href="catalog1.php">Concrete Pipe</a>
+                        </li>
+                        <li><a href="catalog2.php">Catch Basins</a>
+                        </li>
+                        <li><a href="catalog3.php">Manholes</a>
+                        </li>
+                        <li><a href="catalog4.php">Maintenance Holes</a>
+                        </li>
+                        <li><a href="catalog5.php">Concrete Products</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="employment.php">Careers</a>
+                    </li>
+                    <li><a href="contact.php">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </nav>
