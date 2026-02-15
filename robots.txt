@@ -1,3 +1,7 @@
 User-agent: *
-Allow: /
+Disallow: /html/
+Disallow: /_vti_/
+Disallow: /_vti_cnf/
+Disallow: /cgi-bin/
+
 Sitemap: https://shopeconcrete.com/sitemap.xml
