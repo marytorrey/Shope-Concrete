@@ -46,7 +46,7 @@
                		 </figure>
                 	<div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div></a>
                
-					<a href="pdf/Catalog/Page 28 - 48 inch Type 204b Maintenance Hole.pdf" download><span style="color: black">48" Type 204b <br>Maintenance Hole</span><br> Download .pdf</a>
+					<a href="pdf/Page 28 - 48 inch Type 204b Maintenance Hole.pdf" download><span style="color: black">48" Type 204b <br>Maintenance Hole</span><br> Download .pdf</a>
                 </article>
 				
               </div>
