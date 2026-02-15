@@ -1,14 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+# Force HTTPS + non-www for shopeconcrete.com
+RewriteCond %{HTTP_HOST} ^www\.shopeconcrete\.com$ [NC,OR]
 RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^(www\.)?shopeconcrete\.com [NC]
-RewriteRule ^(.*)$ https://shopeconcrete.com/$1 [L,R=301]
+RewriteRule ^ https://shopeconcrete.com%{REQUEST_URI} [L,R=301]
 </IfModule>
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^(www\.)?shopeconcrete\.com [NC]
-RewriteRule .* - [E=UPGRADE]
-    <IfModule mod_headers.c>
-        Header always set Content-Security-Policy "upgrade-insecure-requests;" env=UPGRADE
-    </IfModule>
+
+<IfModule mod_headers.c>
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
 </IfModule>
