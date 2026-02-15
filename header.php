@@ -2,7 +2,7 @@
 //Gets the current URL and finds which page is the main page and returns back the title tag
     //Site Title ####Fix Substring below when you go live to 24 #### -->
 
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $currentPage = basename($path);
 if ($currentPage === '' || $currentPage === false) { $currentPage = 'index.php'; }
 
@@ -211,53 +211,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar__element rd-navbar-search_collapsable">
-                  <button class="rd-navbar-search__toggle rd-navbar-fixed--hidden" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
+                  <button class="rd-navbar-search__toggle" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
                 </div>
                 <!-- RD Search-->
                <!-- <div class="rd-navbar-search rd-navbar-search_toggled rd-navbar-search_not-collapsable">
-                  <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                  <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
                     <div class="form-wrap">
-                      <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
-                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                      <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                      <label class="form-label" for="rd-navbar-search-form-input">Enter keyword</label>
                       <div class="rd-search-results-live" id="rd-search-results-live"></div>
                     </div>
-                    <button class="rd-search__submit" type="submit"></button>
+                    <button class="rd-search__toggle" type="submit"></button>
                   </form>
-                </div> -->
-                <div class="rd-navbar-nav_collapsable">
-                  <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.php">Home</a>
-                    </li>
-                    <li><a href="about.php">About Us</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="about.php">About Us</a>
-                        </li>
-                        <li><a href="qc.php">Quality Control</a>
-                        </li>
-                        <li><a href="video.php">About Us Video</a>
+                </div>-->
+                <ul class="rd-navbar-nav">
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.php">About</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="about.php">History</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="qc.php">Quality Control</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="video.php">About Us Video</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="aboutTwirlyBoxes.php">Our Sister Companies</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="verticleTwirlyBoxes.php">Our Suppliers</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="startercat.php">Products</a>
+                    <div class="rd-menu rd-navbar-megamenu">
+                      <ul class="rd-navbar-megamenu-markup">
+                        <li>
+                          <ul class="rd-navbar-megamenu-list">
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="startercat.php">E-Catalog</a></li>
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="catalog1.php">Concrete Pipe</a></li>
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="catalog2.php">Catch Basins</a></li>
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="catalog3.php">Manholes</a></li>
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="catalog4.php">Maintenance Holes</a></li>
+                            <li class="rd-navbar-megamenu-list-item"><a class="rd-navbar-megamenu-list-link" href="catalog5.php">Concrete Products</a></li>
+                          </ul>
                         </li>
                       </ul>
-                    </li>
-                    <li><a href="startercat.php">E-Catalog</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="catalog1.php">Concrete Pipe</a>
-                        </li>
-                        <li><a href="catalog2.php">Catch Basins</a>
-                        </li>
-                        <li><a href="catalog3.php">Manholes</a>
-                        </li>
-                        <li><a href="catalog4.php">Maintenance Holes</a>
-                        </li>
-                        <li><a href="catalog5.php">Concrete Products</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="employment.php">Careers</a>
-                    </li>
-                    <li><a href="contact.php">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
+                    </div>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="employment.php">Careers</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="employment.php">Employment Opportunities</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="disbatch.php">Assistant Dispatcher</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="drafter.php">CAD Drafter</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="driver.php">Class A Driver</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="frontdesk.php">Front Desk & Inside Sales</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="general.php">General Labor</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contact.php">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- RD Navbar Search-->
+              <div class="rd-navbar-search rd-navbar-search_toggled rd-navbar-search_not-collapsable">
+                <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                  <div class="form-wrap">
+                    <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
+                    <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                    <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                  </div>
+                </form>
+                <button class="rd-navbar-search__toggle" data-rd-navbar-toggle=".rd-navbar-search" onclick="document.getElementById('rd-navbar-search-form-input').value = '';"></button>
               </div>
             </div>
           </nav>
