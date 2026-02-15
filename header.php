@@ -9,40 +9,70 @@ if ($currentPage === '' || $currentPage === false) { $currentPage = 'index.php';
 function getTitle($currentPage){
     switch ($currentPage) {
         case 'index.php':
-            echo 'Shope Concrete LLC';
+            echo 'Home | Shope Concrete - Puyallup, WA';
             break;
         case 'about.php':
-            echo 'Shope - About Us';
+            echo 'About | Shope Concrete - Puyallup, WA';
             break;
         case 'contact.php':
-            echo 'Contact Us';
+            echo 'Contact | Shope Concrete - Puyallup, WA';
             break;
         case 'employment.php':
-            echo 'Career Opportunities';
+            echo 'Careers | Shope Concrete - Puyallup, WA';
             break;
         case 'privacy.php':
-            echo 'Privacy Policy';
+            echo 'Privacy Policy | Shope Concrete - Puyallup, WA';
             break;
         case 'startercat.php':
-            echo 'E-Catalog';
+            echo 'E-Catalog | Shope Concrete - Puyallup, WA';
             break;
         case 'catalog1.php':
-            echo 'Concrete Pipe';
+            echo 'Concrete Pipe | Shope Concrete - Puyallup, WA';
             break;
         case 'catalog2.php':
-            echo 'Catch Basins';
+            echo 'Catch Basins | Shope Concrete - Puyallup, WA';
             break;
         case 'catalog3.php':
-            echo 'Manholes';
+            echo 'Manholes | Shope Concrete - Puyallup, WA';
             break;
         case 'catalog4.php':
-            echo 'Maintenance Holes';
+            echo 'Maintenance Holes | Shope Concrete - Puyallup, WA';
+            break;
+        case 'catalog5.php':
+            echo 'Concrete Products | Shope Concrete - Puyallup, WA';
             break;
         case 'qc.php':
-            echo 'Quality Control';
+            echo 'Quality Control | Shope Concrete - Puyallup, WA';
+            break;
+        case '404.php':
+            echo 'Page Not Found | Shope Concrete - Puyallup, WA';
+            break;
+        case 'aboutTwirlyBoxes.php':
+            echo 'Our Sister Companies | Shope Concrete - Puyallup, WA';
+            break;
+        case 'verticleTwirlyBoxes.php':
+            echo 'Our Suppliers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'disbatch.php':
+            echo 'Assistant Dispatcher Careers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'drafter.php':
+            echo 'CAD Drafter Careers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'driver.php':
+            echo 'Class A Driver Careers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'frontdesk.php':
+            echo 'Front Desk & Inside Sales Careers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'general.php':
+            echo 'General Labor Careers | Shope Concrete - Puyallup, WA';
+            break;
+        case 'video.php':
+            echo 'About Us Video | Shope Concrete - Puyallup, WA';
             break;
         default:
-            echo 'Shope Concrete';
+            echo 'Shope Concrete - Puyallup, WA';
             break;
     }
 }
@@ -121,7 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       </li>
                     </ul>
                   </div>
-			<!-- facebook, twitter, google+, vimeo, youtube, pinteret
+				<!-- facebook, twitter, google+, vimeo, youtube, pinteret
                   <div class="rd-navbar-top-panel__right">
                     <ul class="list-inline-xxs">
                       <li><a class="icon icon-xxs icon-gray-darker fa fa-facebook" href="#"></a></li>
@@ -132,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <li><a class="icon icon-xxs icon-gray-darker fa fa-pinterest-p" href="#"></a></li>
                     </ul>
                   </div>
-				-->
+					-->
                 </div>
               </div>
             </div>
@@ -189,14 +219,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="about.php">About</a>
                     </li>
                     <?php include 'quicklinks.php';?>
-		<!-- QC Page
-					<li><a href="qc.php">QC Info</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="404.php">There is a new page. What do you want Eric Armstrong??</a>
-                        </li>
-                      </ul>
-                    </li>
-		-->
+			<!-- QC Page
+						<li><a href="qc.php">QC Info</a>
+	                      <ul class="rd-navbar-dropdown">
+	                        <li><a href="404.php">There is a new page. What do you want Eric Armstrong??</a>
+	                        </li>
+	                      </ul>
+	                    </li>
+			-->
 
                     <li><a href="startercat.php">Catalog</a>
                       <ul class="rd-navbar-megamenu">
@@ -219,108 +249,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           </ul>
 						</li>
 						<li>
-						<p class="rd-megamenu-header">WSDOT<br> Catch Basins</p>
+                          <p class="rd-megamenu-header">City of Seattle</p>
                           <ul class="rd-megamenu-list">
-                            <li><a href="pdf/Page 14 - 48 inch Type 2 Precast Catch Basin.pdf">48" Type 2 Precast Catch Basin</a></li>
-                            <li><a href="pdf/Page 15 - 54 inch Type 2 Precast Catch Basin.pdf">54" Type 2 Precast Catch Basin</a></li>
-                            <li><a href="pdf/Page 16 - 60 inch Type 2 Precast Catch Basin.pdf">60" Type 2 Precast Catch Basin</a></li>
-							<li><a href="pdf/Page 17 - 72 inch Type 2 Precast Catch Basin.pdf">72" Type 2 Precast Catch Basin</a></li>
-							<li><a href="pdf/Page 18 - 72 inch Type 2 Precast Catch Basin With Baffle.pdf">72" Type 2 Precast Catch Basin - Baffle</a></li>
-							<li><a href="pdf/Page 19 - 84 inch Type 2 Precast Catch Basin.pdf">84" Type 2 Precast Catch Basin</a></li>
-							<li><a href="pdf/Page 20 - 96 inch Type 2 Precast Catch Basin.pdf">96" Type 2 Precast Catch Basin</a></li>
-							<li><a href="pdf/Page 21 - 84 inch Type 2 Precast Manhole.pdf">84" Type 2 Precast Manhole</a></li>
+							<li><a href="pdf/Page 14 - Seattle Standard Plan 200a - 48 inch Type 204a Maintenance Hole.pdf">48" Type 204a Maintenance Hole</a></li>
+							<li><a href="pdf/Page 15 - Seattle Standard Plan 200b - 54 inch Type 204b Maintenance Hole.pdf">54" Type 204b Maintenance Hole</a></li>
+							<li><a href="pdf/Page 16 - Seattle Standard Plan 200c - 60 inch Type 204c Maintenance Hole.pdf">60" Type 204c Maintenance Hole</a></li>
+							<li><a href="pdf/Page 17 - Seattle Standard Plan 200d - 72 inch Type 204d Maintenance Hole.pdf">72" Type 204d Maintenance Hole</a></li>
+							<li><a href="pdf/Page 18 - Seattle Standard Plan 200e - 84 inch Type 204e Maintenance Hole.pdf">84" Type 204e Maintenance Hole</a></li>
+							<li><a href="pdf/Page 19 - Seattle Standard Plan 200f - 96 inch Type 204f Maintenance Hole.pdf">96" Type 204f Maintenance Hole</a></li>
+							<li><a href="pdf/Page 20 - Seattle Standard Plan 240 - Catch Basin Type 240.pdf">Catch Basin Type 240</a></li>
+							<li><a href="pdf/Page 21 - Seattle Standard Plan 241 - Catch Basin Type 241.pdf">Catch Basin Type 241</a></li>
+							<li><a href="pdf/Page 22 - Seattle Standard Plan 242 - Catch Basin Type 242.pdf">Catch Basin Type 242</a></li>
                           </ul>
 						</li>
 						<li>
-						  <p class="rd-megamenu-header">Seattle</p>
+                          <p class="rd-megamenu-header">City of Tacoma</p>
                           <ul class="rd-megamenu-list">
-                            <li><a href="pdf/Page 25 - 48 inch Type 240 ABCD Precast Catch Basin.pdf">48" Type 240 ABCD</a></li>
-                            <li><a href="pdf/Page 26 - 48 inch Type 204a Maintenance Hole.pdf">48" Type 204a</a></li>
-                            <li><a href="pdf/Catalog/Page 41 - 48 inch Type 204b Maintenance Hole.pdf">48" Type 204b</a></li>
-                            <li><a href="pdf/Page 27 - 48 inch Type 204a Maintenance Hole-Modified.pdf">48" Type 204a</a></li>
-							<li><a href="pdf/Page 28 - 48 inch Type 204b Maintenance Hole.pdf">54" Type 204b</a></li>
-							<li><a href="pdf/Page 29 - 54 inch Type 270 Flow Control Structure.pdf">54" Type 270 Flow Control</a></li>
-							<li><a href="pdf/Page 30 - 54 inch Type 204.5a Maintenance Hole.pdf">54" Type 204.5a Maintenace Hole</a></li>
-							<li><a href="pdf/Page 31 - 54 inch Type 204.5b Maintenance Hole.pdf">54" Type 204.5b</a></li>
-							<li><a href="pdf/Page 32 - 60 inch Type 205a Maintenance Hole.pdf">60" Type 205a</a></li>
-							<li><a href="pdf/Page 33 - 60 inch Type 205b Maintenance Hole.pdf">60" Type 205b</a></li>
-							<li><a href="pdf/Page 34 - 72 inch Type 206a Maintenance Hole.pdf">72" Type 206a</a></li>
-							<li><a href="pdf/Page 35 - 72 inch Type 206b Maintenance Hole.pdf">72" Type 206b</a></li>
-							<li><a href="pdf/Page 36 - 84 inch Type 207a Maintenance Hole.pdf">84" Type 207a</a></li>
-							<li><a href="pdf/Page 37 - 84 inch Type 207b Maintenance Hole.pdf">84" Type 207b</a></li>
-							<li><a href="pdf/Page 38 - 96 inch Type 208a Maintenance Hole.pdf">96" Type 208a</a></li>
-							<li><a href="pdf/Page 39 - 96 inch Type 208b Maintenance Hole.pdf">96" Type 208b</a></li>
+							<li><a href="pdf/Page 23 - Tacoma Standard Plan dr-03 - Catch Basin Type 1.pdf">Catch Basin Type 1</a></li>
+							<li><a href="pdf/Page 24 - Tacoma Standard Plan dr-04 - Catch Basin Type 2.pdf">Catch Basin Type 2</a></li>
                           </ul>
-                        </li>
-                        <li>
-						  <p class="rd-megamenu-header">Catch Basins</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="pdf/Page 45 - Catch Basin Risers - Type 1 Risers.pdf">Risers Type 1</a></li>
-                            <li><a href="pdf/Page 46 - Type 1.pdf">Type 1</a></li>
-							<li><a href="pdf/Page 47 - Type 1 Curb Inlet Top.pdf">Type 1 - Top</a></li>
-							<li><a href="pdf/Page 48 - Catch Basin Type 1-L.pdf">Type 1-L</a></li>
-							<li><a href="pdf/Page 49 - Type 1-L Curb Inlet Top.pdf">Type 1-L - Top</a></li>
-							<li><a href="pdf/Page 50 - Catch Basin Type 1-P.pdf">Type 1-P</a></li>
-                            <li><a href="pdf/Page 51 - Type 1 – Optional Ditch Inlet Top.pdf">Type 1 - optional Ditch Inlet Top</a></li>
-                            <li><a href="pdf/Page 52 - Conversion Riser For Type 1-L Catch Basin.pdf">Type 1-L Conversion Riser</a></li>
-							<li><a href="pdf/Page 53 - Catch Basin Type 241a.pdf">Type 241a</a></li>
-							<li><a href="pdf/Page 54 - Catch Basin Type 242.pdf">Type 242</a></li>
-							<li><a href="pdf/Page 55 - Type 252 Inlet.pdf">Type 252 Inlet</a></li>
-							<li><a href="pdf/Page 56 - Inlet Basin Type 250.pdf">Type 250 Inlet Basin</a></li>
-						  </ul>
-                        </li>
-                        <li>
-                          <p class="rd-megamenu-header">Catch Basins</p>
-                          <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 57 - Grate Inlet Type 2.pdf">Inlet Type 2</a></li>
-							<li><a href="pdf/Page 58 - Grate Inlet Type 2 Top - Modified.pdf">Type 2 - Mod</a></li>
-							<li><a href="pdf/Page 59 - Catch Basin Type 15.pdf">Type 15</a></li>
-							<li><a href="pdf/Page 60 - Curb Inlet Type 26.pdf">Type 26</a></li>
-							<li><a href="pdf/Page 61 - Curb Inlet Type 26M.pdf">Type 26 - Mod</a></li>
-							<li><a href="pdf/Page 62 - Catch Basin Type 30.pdf">Type 30</a></li>
-							<li><a href="pdf/Page 63 - Catch Basin Type 40.pdf">Type 40</a></li>
-							<li><a href="pdf/Page 64 - Drop Inlet Type 1.pdf">Type 1 - Drop Inlet</a></li>
-							<li><a href="pdf/Page 65 - Catch Basin Type 9.pdf">Type 9</a></li>
-							<li><a href="pdf/Page 66 - Catch Basin Type 50.pdf">Type 50</a></li>
-                          </ul>
-                        </li>
+						</li>
 						<li>
-                          <p class="rd-megamenu-header">Concrete Pipe</p>
+                          <p class="rd-megamenu-header">Miscellaneous</p>
                           <ul class="rd-megamenu-list">
-							<li><a href="pdf/Page 72 - 12in to 24 inch Concrete Pipe Profile.pdf">12" to 24" Pipe</a></li>
-							<li><a href="pdf/Page 73 - 12in to 24 inch Concrete Pipe Reinforcement.pdf">12" to 24" Profile</a></li>
-							<li><a href="pdf/Page 75 - Pyramid Monument.pdf">Pyramid Monument</a></li>
-							<li><a href="pdf/Page 76 - Bell Monument.pdf">Bell Monument</a></li>
+							<li><a href="pdf/Page 25 - Area Drain.pdf">Area Drain</a></li>
+							<li><a href="pdf/Page 26 - Beehive Grate.pdf">Beehive Grate</a></li>
+							<li><a href="pdf/Page 27 - Concrete Pipe.pdf">Concrete Pipe</a></li>
+							<li><a href="pdf/Page 28 - Distribution Box.pdf">Distribution Box</a></li>
+							<li><a href="pdf/Page 29 - Grease Interceptor.pdf">Grease Interceptor</a></li>
+							<li><a href="pdf/Page 30 - Meter Box.pdf">Meter Box</a></li>
+							<li><a href="pdf/Page 31 - Oil Water Separator.pdf">Oil Water Separator</a></li>
+							<li><a href="pdf/Page 32 - Parking Bumper.pdf">Parking Bumper</a></li>
+							<li><a href="pdf/Page 33 - Septic Tank.pdf">Septic Tank</a></li>
                           </ul>
-						  <p class="rd-megamenu-header">Tacoma</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="pdf/Page 22 - 48 inch Precast Manhole.pdf">48" Precast Manhole</a></li>
-                            <li><a href="pdf/Page 23 - 48 inch Type 3 Precast Manhole.pdf">48" Type 3 Precast Manhole</a></li>
-                            <li><a href="pdf/Page 24 - 54 inch Precast Manhole.pdf">54" Precast Manhole</a></li>
-                          </ul>
-						  <p class="rd-megamenu-header">Accessories</p>
-                          <ul class="rd-megamenu-list">
-                            <li><a href="pdf/Page 40 - Lane P14938 Safety Step.pdf">Lane P14938 Safety Step</a></li>
-                            <li><a href="pdf/Page 41 - Lane Polypropylene Hanging Ladder.pdf">Lane Polypropylene Hanging Ladder</a></li>
-                            <li><a href="pdf/Page 42 - Grade Rings.pdf">Grade Rings</a></li>
-                            <li><a href="pdf/Page 43 - 30 inch Grade Rings.pdf">30" Grade Rings</a></li>
-							<li><a href="pdf/Page 44 - 36 inch Grade Rings.pdf">36" Grade Rings</a></li>
-                          </ul>
-                        </li>
+						</li>
                       </ul>
                     </li>
-					<li><a href="#">Employment</a>
-                      <ul class="rd-navbar-dropdown">
-                      <li><a href ="frontdesk.php">Assocate Accountant</a></li>
-                        <li><a href="driver.php">Class A Driver</a></li>
-						<!--<li><a href="drafter.php">CAD Drafter</a></li> -->
-						<!--<li><a href="disbatch.php">Assistant Disbatcher</a>
-                        </li> -->
-						<!--<li><a href ="frontdesk.php">Front Desk / Sales</a></li> -->
-						          <li><a href="general.php">General Labor</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.php">Contacts</a>
+                    <li><a href="contact.php">Contact</a>
                     </li>
                   </ul>
                 </div>
