@@ -1,18 +1,19 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# Force HTTPS + non-www for shopeconcrete.com
-RewriteCond %{HTTP_HOST} ^www\.shopeconcrete\.com$ [NC,OR]
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://shopeconcrete.com%{REQUEST_URI} [L,R=301]
+# 301 Redirects for legacy HTML pages (priority over general HTTPS/non-www enforcement)
+RewriteRule ^html/com_overview\.html$ https://shopeconcrete.com/about.php [L,R=301]
+RewriteRule ^html/cat_catchbasins\.html$ https://shopeconcrete.com/catalog2.php [L,R=301]
+RewriteRule ^html/cat_areadrains\.html$ https://shopeconcrete.com/catalog1.php [L,R=301]
+RewriteRule ^html/home\.html$ https://shopeconcrete.com/index.php [L,R=301]
 
-# Redirect legacy HTML pages to PHP equivalents
-# Using RedirectMatch for broader compatibility and ensuring 301 status
-RedirectMatch 301 ^/html/home(_phones.*)?\.html$ https://shopeconcrete.com/
-RedirectMatch 301 ^/html/com_(overview|policies|profile_.*)\.html$ https://shopeconcrete.com/about.php
-RedirectMatch 301 ^/html/cat_catchbasins\.html$ https://shopeconcrete.com/catalog2.php
-RedirectMatch 301 ^/html/cat_areadrains\.html$ https://shopeconcrete.com/catalog2.php
-RedirectMatch 301 ^/html/cat_conv_tools\.html$ https://shopeconcrete.com/startercat.php
+# Force HTTPS + non-www for all other pages
+RewriteCond %{HTTP_HOST} ^www\.shopeconcrete\.com$ [NC]
+RewriteRule ^(.*)$ https://shopeconcrete.com/ [L,R=301]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://shopeconcrete.com/ [L,R=301]
+
 </IfModule>
 
 <IfModule mod_headers.c>
