@@ -82,6 +82,16 @@
 
 		// Page loader & Page transition
 		if (plugins.preloader.length && !isNoviBuilder) {
+			// Immediately dismiss preloader on back/forward navigation (popstate)
+			// to prevent the spinner from stalling when the browser restores a cached page.
+			window.addEventListener('pageshow', function (e) {
+				if (e.persisted) {
+					plugins.preloader.addClass('loaded');
+				}
+			});
+			window.addEventListener('popstate', function () {
+				plugins.preloader.addClass('loaded');
+			});
 			pageTransition({
 				target: document.querySelector('.page'),
 				delay: 0,

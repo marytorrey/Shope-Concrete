@@ -82,21 +82,18 @@ function getTitle($currentPage){
 <html class="wide wow-animation" lang="en">
   <head>
     <title><?php getTitle($currentPage);?></title>
-    <?php $canonical = 'https://shopeconcrete.com' . $_SERVER['REQUEST_URI']; ?>
+    <?php $canonical = 'https://shopeconcrete.com' . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>
     <link rel="canonical" href="<?php echo htmlspecialchars($canonical, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,300italic%7CMontserrat:400,700">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/formStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/bundle.min.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
       <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -144,8 +141,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="unit-left"><span class="icon icon-sm icon-primary linear-icon-telephone"></span></div>
                           <div class="unit-body">
                             <ul class="list-semicolon">
-                              <li><a href="tel:#">(253) 848-1551</a></li>
-                              <li><a href="tel:#"> (800) 422-7560</a></li>
+                              <li><a href="tel:+12538481551">(253) 848-1551</a></li>
+                              <li><a href="tel:+18004227560">(800) 422-7560</a></li>
                             </ul>
                           </div>
                         </div>

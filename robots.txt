@@ -3,5 +3,14 @@ Disallow: /html/
 Disallow: /_vti_/
 Disallow: /_vti_cnf/
 Disallow: /cgi-bin/
+Disallow: /cache/
+Disallow: /bat/
+Disallow: /shopeconcrete.com/
+Disallow: /etc/
+Disallow: /accounting.php
+Disallow: /counters.php
+Disallow: /calendar.php
+Disallow: /tatt.php
+Disallow: /mail.php
 
 Sitemap: https://shopeconcrete.com/sitemap.xml

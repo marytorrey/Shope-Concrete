@@ -1,9 +1,8 @@
 <?php
 	include 'header.php';
 
+	$tab = isset($_POST['tab']) ? $_POST['tab'] : '';
 	if(isset($_POST['submit'])){
-		//$tab = echo ('<script type="text/javascript">$("ul.tabs li a.active");</script>');
-		
 		if($tab == '1'){
 			$to = 'mclassy@gmail.com';		
 		}
@@ -135,8 +134,8 @@
 							<dt>Phones</dt>
 							<dd>
 							  <ul class="list-semicolon">
-								<li><a href="tel:#">(253) 848-1551</a></li>
-								<li><a href="tel:#">(800) 422-7560</a></li>
+								<li><a href="tel:+12538481551">(253) 848-1551</a></li>
+								<li><a href="tel:+18004227560">(800) 422-7560</a></li>
 							  </ul>
 							</dd>
 						  </dl>
@@ -228,5 +227,3 @@
 <?php
 	include 'footer.php';
 ?>
-</body>
-</html>

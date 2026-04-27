@@ -8,8 +8,11 @@
 			<div class="container">
 			  <div class="row justify-content-sm-center">
 				<div class="col-md-10 col-xl-8">
-				  <h2>The Coolness is Coming!</h2>
-				  <p>I am currently working on the starter catalog page. You can check my progress by clicking below.<br>Also, If you see Brad, tell him he needs to rename the pictures for the website on the google drive. Thank you!</p><a class="button button-black" href="/newsite/startercat.php">Check it out</a>
+				  <h2>Page Not Found</h2>
+				  <p>The page you are looking for does not exist or has been moved. Please use the navigation above or visit our catalog.</p>
+				  <a class="button button-primary" href="index.php">Go Home</a>
+				  &nbsp;
+				  <a class="button button-black" href="startercat.php">View Catalog</a>
 				</div>
 			  </div>
 			</div>
@@ -18,7 +21,6 @@
 	  </div>
 	</section>
 </section>
-
 
 <?php include 'footer.php';?>
 </body>

@@ -21,30 +21,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </ul>
             </div>
             <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
-              <h6>Recent Comments</h6>
-              <ul class="list-xs">
-                <li>
-                  <!-- Comment minimal-->
-                  <article class="comment-minimal">
-                    <p class="comment-minimal__author">All contracts Derek has</p>
-                    <p class="comment-minimal__link"><a href="404.php">Shope Concrete is a great company and Derek Rogers is the greatest Salesperson I have ever worked with</a></p>
-                  </article>
-                </li>
-                <li>
-                  <!-- Comment minimal-->
-                  <article class="comment-minimal">
-                    <p class="comment-minimal__author">Brian Williamson on</p>
-                    <p class="comment-minimal__link"><a href="404.php">Construction's core values have been shaped over more than 10 years of</a></p>
-                  </article>
-                </li>
-                <li>
-                  <!-- Comment minimal-->
-                  <article class="comment-minimal">
-                    <p class="comment-minimal__author">Brian Williamson on</p>
-                    <p class="comment-minimal__link"><a href="404.php">How to save 10 grand a year with digital blueprints</a></p>
-                  </article>
-                </li>
-              </ul>
+              <h6>About Us</h6>
+              <p>Shope Concrete Products has been serving Western Washington contractors since 1947. We manufacture and distribute precast concrete pipe, manholes, catch basins, and custom precast products for underground infrastructure projects.</p>
             </div>
             <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
               <h6>Contacts</h6>
@@ -60,8 +38,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <dt>Phones</dt>
                     <dd>
                       <ul class="list-semicolon">
-                        <li><a href="tel:#">(253) 848-1551</a></li>
-                        <li><a href="tel:#">(800) 422-7560</a></li>
+                        <li><a href="tel:+12538481551">(253) 848-1551</a></li>
+                        <li><a href="tel:+18004227560">(800) 422-7560</a></li>
                       </ul>
                     </dd>
                   </dl>
@@ -69,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>
                   <dl class="list-terms-minimal">
                     <dt>E-mail</dt>
-                    <dd><a class="link-primary" href="mailto:#">info@shopeconcrete.com</a></dd>
+                    <dd><a class="link-primary" href="mailto:info@shopeconcrete.com">info@shopeconcrete.com</a></dd>
                   </dl>
                 </li>
                 <li>
@@ -109,4 +87,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

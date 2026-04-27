@@ -1,21 +1,90 @@
+# ============================================================
+# Shope Concrete .htaccess
+# ============================================================
+
+# --------------------------------------------------------------
+# Custom 404 error page
+# --------------------------------------------------------------
+ErrorDocument 404 /404.php
+
+# --------------------------------------------------------------
+# Rewrite rules
+# --------------------------------------------------------------
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# 301 Redirects for legacy HTML pages (priority over general HTTPS/non-www enforcement)
+# 301 Redirects for legacy HTML pages (must come before canonical enforcement)
 RewriteRule ^html/com_overview\.html$ https://shopeconcrete.com/about.php [L,R=301]
 RewriteRule ^html/cat_catchbasins\.html$ https://shopeconcrete.com/catalog2.php [L,R=301]
 RewriteRule ^html/cat_areadrains\.html$ https://shopeconcrete.com/catalog1.php [L,R=301]
 RewriteRule ^html/home\.html$ https://shopeconcrete.com/index.php [L,R=301]
 
-# Force HTTPS + non-www for all other pages
+# Force non-www (preserve full path)
 RewriteCond %{HTTP_HOST} ^www\.shopeconcrete\.com$ [NC]
-RewriteRule ^(.*)$ https://shopeconcrete.com/ [L,R=301]
+RewriteRule ^(.*)$ https://shopeconcrete.com/$1 [L,R=301]
 
+# Force HTTPS (preserve full path)
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://shopeconcrete.com/ [L,R=301]
+RewriteRule ^(.*)$ https://shopeconcrete.com/$1 [L,R=301]
 
 </IfModule>
 
+# --------------------------------------------------------------
+# Security headers
+# --------------------------------------------------------------
 <IfModule mod_headers.c>
 Header always set Content-Security-Policy "upgrade-insecure-requests;"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# --------------------------------------------------------------
+# Gzip / Deflate compression
+# --------------------------------------------------------------
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+AddOutputFilterByType DEFLATE application/json application/xml
+AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --------------------------------------------------------------
+# Browser caching (far-future expires for versioned assets)
+# --------------------------------------------------------------
+<IfModule mod_expires.c>
+ExpiresActive On
+
+# Images
+ExpiresByType image/jpeg                "access plus 1 year"
+ExpiresByType image/png                 "access plus 1 year"
+ExpiresByType image/gif                 "access plus 1 year"
+ExpiresByType image/webp                "access plus 1 year"
+ExpiresByType image/svg+xml             "access plus 1 year"
+ExpiresByType image/x-icon              "access plus 1 year"
+
+# Fonts
+ExpiresByType font/woff                 "access plus 1 year"
+ExpiresByType font/woff2                "access plus 1 year"
+ExpiresByType application/font-woff     "access plus 1 year"
+ExpiresByType application/font-woff2    "access plus 1 year"
+
+# CSS and JavaScript
+ExpiresByType text/css                  "access plus 6 months"
+ExpiresByType application/javascript    "access plus 6 months"
+
+# PDFs
+ExpiresByType application/pdf           "access plus 1 month"
+
+# HTML / PHP (short cache — dynamic content)
+ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+# --------------------------------------------------------------
+# ETags (reduce redundant validation requests)
+# --------------------------------------------------------------
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|woff|woff2|pdf)$">
+Header append Cache-Control "public"
+</FilesMatch>
 </IfModule>
